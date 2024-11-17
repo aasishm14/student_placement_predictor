@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Load the trained models
 models = {
-    'Linear Regression': joblib.load('model_campus_placement.joblib')
+    'model_placement': joblib.load('model_campus_placement.joblib')
 }
 
 @app.route('/')
