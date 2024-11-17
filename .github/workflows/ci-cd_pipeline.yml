@@ -28,7 +28,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run model script
-      run: python Campus Placement Prediction Using ML.ipynb
+      run: python Campus_Placement_Prediction_Using_ML.ipynb
 
     - name: Build Docker image
       run: docker build -t ml-model .
