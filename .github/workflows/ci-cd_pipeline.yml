@@ -38,6 +38,6 @@ jobs:
 
     - name: Push Docker image to GHCR
       run: |
-        echo "${{ secrets.readwritepackage }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
         docker tag student_placement_model ghcr.io/${{ github.repository_owner }}/student_placement_model:latest
         docker push ghcr.io/${{ github.repository_owner }}/student_placement_model:latest
